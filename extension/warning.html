@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+    <meta charset="UTF-8">
+    <title>تحذير أمني</title>
+    <style>
+        body { background: #900; color: white; text-align: center; font-family: 'Cairo', sans-serif; padding-top: 100px; }
+        .box { max-width: 600px; margin: auto; background: rgba(0,0,0,0.3); padding: 40px; border-radius: 20px; border: 2px solid rgba(255,255,255,0.1); }
+        h1 { font-size: 45px; margin-bottom: 10px; }
+        #reason { font-size: 22px; background: #c00; padding: 10px; border-radius: 10px; margin: 20px 0; font-weight: bold; }
+        .btn { background: white; color: #900; padding: 12px 30px; text-decoration: none; border-radius: 8px; font-weight: 800; display: inline-block; cursor: pointer; }
+    </style>
+</head>
+<body>
+    <div class="box">
+        <h1>⚠️ توقف! الموقع خطر</h1>
+        <p>تم حظر هذا الموقع بواسطة SecureShield لحمايتك.</p>
+        <div id="reason">جاري جلب تفاصيل التهديد...</div>
+        <a href="#" id="backBtn" class="btn">العودة للمكان الآمن</a>
+    </div>
+
+    <script src="warning.js"></script>
+</body>
+</html>

@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
+    
+    <style>
+        body { width: 320px; margin: 0; font-family: sans-serif; background: #fff; }
+        .header { background: linear-gradient(135deg, #00e4fe 0%, #28a745 100%); padding: 15px; color: white; text-align: center; }
+        .main-content { padding: 20px; text-align: center; }
+        
+        .toggle-btn { 
+            width: 80px; height: 80px; border-radius: 50%; margin: 0 auto 10px;
+            display: flex; align-items: center; justify-content: center;
+            border: 5px solid #fff; box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+            cursor: pointer; transition: all 0.3s ease; 
+        }
+
+        /* تعديل بسيط للتحكم في حجم ولون أيقونة فونت أوسم داخل الدائرة */
+        .toggle-btn i {
+            font-size: 35px;
+            transition: color 0.3s ease;
+        }
+
+        .on { background: #e3faf1; border-color: #28a745; }
+        .off { background: #fdecea; border-color: #dc3545; }
+
+        #status-txt { font-size: 15px; transition: color 0.3s; display: block; margin-bottom: 10px; }
+
+        .history { 
+            text-align: right; 
+            margin-top: 40px; 
+            border-top: 1px solid #eee; 
+            padding-top: 15px; 
+        }
+
+        .item { display: flex; justify-content: space-between; font-size: 12px; padding: 8px 0; border-bottom: 1px solid #f9f9f9; }
+        .badge { font-size: 10px; padding: 2px 6px; border-radius: 4px; color: #fff; }
+        .footer { background: #28a745; color: white; border: none; width: 100%; padding: 12px; cursor: pointer; display: flex; justify-content: space-between; }
+    </style>
+</head>
+<body>
+    <div class="header">
+        <h1>درع الأمان</h1>
+        <p>نظام الحماية الذكي</p>
+    </div>
+    <div class="main-content">
+        <div id="circle" class="toggle-btn on">
+            <i id="shield-icon" class="fas fa-shield-halved"></i>
+        </div>
+        <b id="status-txt">الحماية: مفعلة</b>
+
+        <div class="history">
+            <div style="font-size:11px; color:#888; text-align: center; margin-bottom: 10px;">آخر فحوصات:</div>
+            <div id="list"></div>
+        </div>
+    </div>
+    <button id="dash-btn" class="footer">
+        <b>لوحة التحكم</b>
+        <span>⬅</span>
+    </button>
+    <script src="popup.js"></script>
+</body>
+</html>

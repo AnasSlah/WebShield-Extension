@@ -1,0 +1,30 @@
+{
+  "manifest_version": 3,
+  "name": "SecureShield Pro",
+  "version": "3.0",
+  "description": "نظام حماية متكامل لفحص الروابط والتحميلات",
+
+  "icons": {
+    "128": "icon.png"
+  },
+
+"permissions": [
+    "downloads",
+    "notifications",
+    "storage",
+    "tabs",
+    "webNavigation",
+    "alarms",
+    "scripting"
+  ],
+"host_permissions": [
+    "<all_urls>"
+  ],
+  "background": {
+    "service_worker": "background.js"
+  },
+
+  "action": {
+    "default_popup": "popup.html"
+  }
+}
